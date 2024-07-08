@@ -129,6 +129,22 @@
         height: 100%;
     }
 
+        .responsive-iframe {
+            position: relative;
+            overflow: hidden;
+            padding-top: 56.25%; /* 16:9 aspect ratio */
+        }
+
+        .responsive-iframe iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #EEE;
+            background: white;
+        }
+
         }
     </style> 
 
@@ -171,6 +187,12 @@ src="https://www.facebook.com/tr?id=354458495335117&ev=PageView&noscript=1"
 <!--- Title ---!>
 
         <h2 class="english-text"><span style="color: #4CAF50;">Welcome to my website!</span></h2>
+
+<p class="english-text">I am a digital creator who helps business owners grow through online marketing.</p>
+<p class="english-text">My services focus on providing digital solutions that empower businesses to thrive in the online landscape. I specialize in crafting digital creations tailored to their unique needs.</p>
+<p class="english-text">My newsletter "GrowthPulse" is a valuable resource for both business owners and digital creators, offering insights and strategies to fuel growth. I guide the subscribers through identifying the right actions to take in various scenarios and how to implement them effectively.</p>
+<p class="english-text">For some clients, I go beyond consultation and take direct action on their behalf, addressing specific situations and executing strategies to achieve their desired outcomes.</p>
+
     <h1 class="english-text">What I Do:</h1>
     <p class="english-text">I help businesses grow using online marketing. This means I use the internet to help businesses get more customers and sell more products.</p>
 
@@ -196,7 +218,12 @@ font-size: 16px; border: none; cursor: pointer;" onclick="window.open
 
 
 
-
+    <div class="responsive-iframe">
+    <center>
+    <p class="english-text"><span style="color: #4CAF50;"><strong>Subscribe to "GrowthPulse: The Ultimate Digital Marketing Newsletter" and transform your online presence</strong></span></p>
+        <iframe src="https://growthpulse.substack.com/embed" frameborder="0" scrolling="no"></iframe>
+    </center>
+    </div>
 
 
 
