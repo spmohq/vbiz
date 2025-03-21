@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Have Fun</title> 
+    <meta property="og:title" content="Have Fun" />
+    <meta property="og:description" content="Enjoy It Now!" />
+    <meta property="og:image" content="https://v.spmukherjee.biz/ftr.jpeg" />
+    <meta property="og:url" content="https://v.spmukherjee.biz/fun.html" />
+    <meta property="og:type" content="website" />
+    <meta name="robots" content="noindex, nofollow">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #2374E1;
+            color: white;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .box {
+            background-color: #2374E1;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .box img {
+            max-width: 50%;
+            height: auto;
+        }
+        .hidden {
+            display: none;
+        }
+        .btn {
+            display: inline-block;
+            background-color: white;
+            color: #2374E1;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Initially hide message, button
+            document.getElementById("message").style.display = "none";
+            document.getElementById("continue-btn").style.display = "none";
+
+            // Show message and button, hide GIF and heading after 5 seconds
+            setTimeout(function () {
+                document.getElementById("message").style.display = "block";
+                document.getElementById("continue-btn").style.display = "inline-block";
+                document.querySelector(".box img").style.display = "none"; // Hide the GIF
+                document.getElementById("loading-text").style.display = "none"; // Hide the heading
+            }, 5000);
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1 id="loading-text">Hold On While Your Page Is Being Generated</h1>
+        <div class="box">
+            <img src="https://v.spmukherjee.biz/ZZ5H.gif" alt="Limited Offer">
+        </div>
+        <p id="message">You're almost there. Click the button below to continue to the next page.</p>
+        <a href="https://www.amazon.in/dp/[B08HCW4GW3]?tag=spmohq0f-21" onclick="openAmazonApp(event)" class="btn" id="continue-btn">Click here to continue</a>
+
+        <script>
+            function openAmazonApp(event) {
+                event.preventDefault();  
+                let asin = "[B08HCW4GW3]";
+                let affiliateTag = "spmohq0f-21";
+                let deepLink = `amazon://www.amazon.in/dp/${asin}?tag=${affiliateTag}`;
+                let fallbackUrl = `https://www.amazon.in/dp/${asin}?tag=${affiliateTag}`;
+
+                window.location.href = deepLink;
+
+                setTimeout(function() {
+                    window.location.href = fallbackUrl;
+                }, 1000);
+            }
+        </script>
+    </div>
+</body>
+</html>
